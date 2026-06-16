@@ -1,4 +1,8 @@
-// MMVPL — shared site script
+// Check theme preference immediately to avoid flash
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark-mode');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.querySelector('.nav-toggle');
   var drawer = document.querySelector('.nav-drawer');
@@ -16,6 +20,16 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  // Hidden Dark Mode Toggle Easter Egg
+  var devCredits = document.querySelectorAll('.developer-credit');
+  devCredits.forEach(function (credit) {
+    credit.addEventListener('click', function (e) {
+      e.preventDefault();
+      var isDark = document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  });
 
   // Simple enquiry form handler (static site placeholder)
   var form = document.querySelector('.enquiry-form');
