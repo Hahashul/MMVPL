@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Madhya Mega Ventures Pvt Ltd</title>
+  <meta name="description" content="Get in touch with MMVPL for HR & staffing, electrical & hardware project enquiries, OEM partnerships, or manufacturing orders. Based in Bhopal, Madhya Pradesh." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Scroll reveal ── */
+    .reveal { opacity:0; transform:translateY(32px); transition: opacity .7s cubic-bezier(0.22,1,0.36,1), transform .7s cubic-bezier(0.22,1,0.36,1); }
+    .reveal.visible { opacity:1; transform:none; }
+    .d1{transition-delay:.08s} .d2{transition-delay:.18s} .d3{transition-delay:.28s} .d4{transition-delay:.38s}
+
+    /* ── Page hero ── */
+    .contact-hero {
+      padding: 80px 0 72px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-soft);
+    }
+    .contact-eyebrow {
+      font-family: var(--ff-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .contact-hero h1 {
+      font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      max-width: 18ch;
+      margin: 0 auto;
+    }
+    .contact-hero .lede {
+      margin: 20px auto 0;
+      max-width: 46ch;
+      text-align: center;
+    }
+    .hero-chips {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--line);
+      background: var(--bg);
+      font-family: var(--ff-display);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      transition: border-color .2s, background .2s, transform .2s;
+    }
+    .chip svg { width:15px; height:15px; color:var(--accent); flex-shrink:0; }
+    .chip:hover { background: var(--card); border-color: var(--accent); transform: translateY(-2px); }
+
+    /* ── Section 1: Form (centred) ── */
+    .form-section {
+      padding: 96px 0;
+    }
+    .form-section .container {
+      max-width: 780px;
+    }
+    .form-section-head {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .form-section-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin-bottom: 10px;
+    }
+    .form-section-head p {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+
+    /* form panel */
+    .form-panel {
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 52px 56px;
+    }
+    .form-row-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 22px;
+    }
+    .form-row label {
+      font-family: var(--ff-display);
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .form-optional {
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+      text-transform: none;
+      letter-spacing: 0;
+      font-family: var(--ff-body);
+    }
+    .form-row input,
+    .form-row textarea,
+    .form-row select {
+      font-family: var(--ff-body);
+      font-size: 0.95rem;
+      padding: 13px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      background: var(--bg);
+      color: var(--ink);
+      resize: vertical;
+      transition: border-color .18s, box-shadow .18s;
+    }
+    .form-row input::placeholder,
+    .form-row textarea::placeholder { color: var(--ink-soft); opacity: .6; }
+    .form-row input:focus,
+    .form-row textarea:focus,
+    .form-row select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+    }
+    .form-row select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23475569' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 38px;
+      cursor: pointer;
+    }
+    .form-submit-btn {
+      width: 100%;
+      justify-content: center;
+      font-size: 0.9rem;
+      letter-spacing: 0.07em;
+      padding: 15px 32px;
+      border-radius: var(--radius-md);
+      margin-top: 4px;
+    }
+    .form-success {
+      margin-top: 16px;
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      background: #ECFDF5;
+      border: 1px solid #6EE7B7;
+      color: #065F46;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-align: center;
+    }
+    body.dark-mode .form-success {
+      background: rgba(6,95,70,.2);
+      border-color: rgba(110,231,183,.3);
+      color: #6EE7B7;
+    }
+
+    /* ── Divider between sections ── */
+    .section-divider {
+      border: none;
+      height: 1px;
+      background: var(--line);
+      margin: 0;
+    }
+
+    /* ── Section 2: Info + Map ── */
+    .info-section {
+      padding: 96px 0 100px;
+      background: var(--bg-soft);
+    }
+    .info-section-head {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .info-section-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin-bottom: 10px;
+    }
+    .info-section-head p { font-size: 0.95rem; color: var(--ink-soft); }
+
+    .info-map-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* Info cards */
+    .info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .info-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 22px 24px;
+      border-radius: var(--radius-lg);
+      background: var(--bg);
+      border: 1px solid var(--line);
+      transition: border-color .2s, transform .2s;
+    }
+    .info-card:hover { border-color: var(--accent); transform: translateX(4px); }
+    .info-card-icon {
+      display: flex; align-items: center; justify-content: center;
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+    .info-card-icon svg { width: 18px; height: 18px; }
+    .info-card-body h4 {
+      font-size: 0.75rem;
+      font-family: var(--ff-display);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 4px;
+    }
+    .info-card-body p,
+    .info-card-body a {
+      font-size: 0.97rem;
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .info-card-body a:hover { color: var(--accent); }
+
+    /* Map */
+    .map-frame {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      aspect-ratio: 4/3;
+    }
+    .map-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .info-map-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    @media (max-width: 640px) {
+      .form-panel { padding: 32px 24px; }
+      .form-row-split { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-accent="orange">
+
+  <!-- NAV -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="brand" aria-label="MMVPL home">
+        <img class="brand-mark" src="images/logo-full.png" alt="MMVPL logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hr-solutions.html">HR Solutions</a></li>
+        <li><a href="project-sales-oem.html">Project Sales &amp; OEM</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-accent nav-cta">
+        <span class="btn-arrow" aria-hidden="true">→</span>
+        get in touch
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 18 18" fill="none"><path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <div class="nav-drawer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hr-solutions.html">HR Solutions</a></li>
+          <li><a href="project-sales-oem.html">Project Sales &amp; OEM</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-accent nav-cta">
+          <span class="btn-arrow" aria-hidden="true">→</span>
+          get in touch
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="contact-hero">
+      <div class="container">
+        <p class="contact-eyebrow">Let's talk</p>
+        <h1 class="section-heading" style="text-align:center; border-left:none; padding-left:0; border-bottom: none;">Contact us</h1>
+        <p class="lede">Have a project in mind or want to become a dealer? We'd love to hear from you.</p>
+        <div class="hero-chips">
+          <a href="tel:+919039099107" class="chip">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2.5L5.5 2.5L6.5 5.5L4.8 6.8C5.5 8.4 6.6 9.5 8.2 10.2L9.5 8.5L12.5 9.5V12C12.5 12.8 11.8 13.5 11 13.4C6 12.9 2.6 9.5 2.1 4.5C2 3.7 2.2 2.9 3 2.5Z"/></svg>
+            +91 90390 99107
+          </a>
+          <a href="mailto:info@mmvpl.in" class="chip">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M2.5 4L8 9L13.5 4"/></svg>
+            info@mmvpl.in
+          </a>
+          <span class="chip" style="cursor:default; pointer-events:none;">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M8 4.5V8L10.5 9.5"/></svg>
+            Mon – Sat &nbsp;·&nbsp; 10 AM – 6 PM
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 1 — FORM (centred)
+    ============================================================ -->
+    <section class="form-section">
+      <div class="container">
+        <div class="form-section-head reveal">
+          <h2>Send us a message</h2>
+          <p>Fill out the form and our team will respond within one business day.</p>
+        </div>
+        <div class="form-panel reveal">
+          <form class="enquiry-form">
+            <div class="form-row-split">
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" />
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com" />
+              </div>
+            </div>
+            <div class="form-row-split">
+              <div class="form-row">
+                <label for="phone">Phone <span class="form-optional">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+91 00000 00000" />
+              </div>
+              <div class="form-row">
+                <label for="enquiry-type">Enquiry type <span class="form-optional">(optional)</span></label>
+                <select id="enquiry-type" name="enquiry-type">
+                  <option value="" disabled selected>Select a division…</option>
+                  <option value="hr">HR &amp; Workforce Solutions</option>
+                  <option value="project-sales">Project Sales &amp; Electrical Hardware</option>
+                  <option value="oem">OEM Procurement Partnerships</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="other">Other / General</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project or enquiry..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit-btn">SEND MESSAGE</button>
+            <p class="form-success" hidden role="status">Thanks — your message has been received. We'll be in touch soon.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ============================================================
+         SECTION 2 — INFO + MAP
+    ============================================================ -->
+    <section class="info-section">
+      <div class="container">
+        <div class="info-section-head reveal">
+          <h2>Find us</h2>
+          <p>We're based in Bhopal, Madhya Pradesh — always reachable by phone or email.</p>
+        </div>
+        <div class="info-map-grid">
+
+          <!-- Info cards -->
+          <div class="info-cards">
+            <div class="info-card reveal d1">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14C8 14 13 10 13 6.5C13 3.5 10.8 2 8 2C5.2 2 3 3.5 3 6.5C3 10 8 14 8 14Z"/><circle cx="8" cy="6.5" r="1.8"/></svg>
+              </div>
+              <div class="info-card-body">
+                <h4>Registered Office</h4>
+                <p>Bhopal, Madhya Pradesh, India</p>
+              </div>
+            </div>
+            <div class="info-card reveal d2">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M2.5 4L8 9L13.5 4"/></svg>
+              </div>
+              <div class="info-card-body">
+                <h4>Email</h4>
+                <a href="mailto:info@mmvpl.in">info@mmvpl.in</a>
+              </div>
+            </div>
+            <div class="info-card reveal d3">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2.5L5.5 2.5L6.5 5.5L4.8 6.8C5.5 8.4 6.6 9.5 8.2 10.2L9.5 8.5L12.5 9.5V12C12.5 12.8 11.8 13.5 11 13.4C6 12.9 2.6 9.5 2.1 4.5C2 3.7 2.2 2.9 3 2.5Z"/></svg>
+              </div>
+              <div class="info-card-body">
+                <h4>Phone</h4>
+                <a href="tel:+919039099107">+91 90390 99107</a>
+              </div>
+            </div>
+            <div class="info-card reveal d4">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M8 4.5V8L10.5 9.5"/></svg>
+              </div>
+              <div class="info-card-body">
+                <h4>Business Hours</h4>
+                <p>Monday – Saturday, 10:00 AM – 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="map-frame reveal d2">
+            <iframe
+              title="MMVPL location map — Bhopal, Madhya Pradesh"
+              src="https://www.google.com/maps?q=Bhopal,Madhya+Pradesh,India&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="index.html" class="brand" aria-label="MMVPL home">
+          <img class="brand-mark" src="images/logo-full.png" alt="MMVPL logo" style="transform:none;height:45px;width:auto;" />
+        </a>
+        <div class="tagline">Empowering Businesses Through People, Products &amp; Performance</div>
+      </div>
+      <div class="footer-contact-bar">
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c0 3.5-4 7-4 7s-4-3.5-4-7a4 4 0 1 1 8 0z"/><circle cx="8" cy="6" r="1.5"/></svg>
+            <span>Bhopal, Madhya Pradesh, India</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M2.5 4L8 9L13.5 4"/></svg>
+            <a href="mailto:info@mmvpl.in">info@mmvpl.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2.5L5.5 2.5L6.5 5.5L4.8 6.8C5.5 8.4 6.6 9.5 8.2 10.2L9.5 8.5L12.5 9.5V12C12.5 12.8 11.8 13.5 11 13.4C6 12.9 2.6 9.5 2.1 4.5C2 3.7 2.2 2.9 3 2.5Z"/></svg>
+            <a href="tel:+919039099107">+91 90390 99107</a>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=Bhopal,Madhya+Pradesh,India" target="_blank" rel="noopener noreferrer" class="get-directions-btn">
+          Get Directions
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" style="width:10px;height:10px;"><path d="M2 10L10 2M10 2H4M10 2V8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hr-solutions.html">HR Solutions</a></li>
+            <li><a href="project-sales-oem.html">Project Sales &amp; OEM</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Divisions</h4>
+          <ul>
+            <li><a href="hr-solutions.html">HR &amp; Workforce</a></li>
+            <li><a href="project-sales-oem.html">Project Sales</a></li>
+            <li><a href="project-sales-oem.html">OEM Partnerships</a></li>
+            <li><a href="project-sales-oem.html">Manufacturing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Enquiry Form</a></li>
+            <li><a href="mailto:info@mmvpl.in">info@mmvpl.in</a></li>
+            <li><a href="tel:+919039099107">+91 90390 99107</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#" class="social-link"><svg viewBox="0 0 16 16" fill="currentColor" style="width:14px;height:14px;margin-right:8px;display:inline-block;vertical-align:middle;"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H3.3V13.39h1.643zm-1.88-8.29c.566 0 1.02-.454 1.02-1.02 0-.565-.454-1.018-1.02-1.018-.566 0-1.019.453-1.019 1.019 0 .566.453 1.02 1.019 1.02zM13.39 13.39h-1.643V10.8c0-.617-.012-1.412-.86-1.412-.86 0-.992.673-.992 1.368v2.634H8.252V6.169h1.578v.981h.022c.22-.416.757-.854 1.554-.854 1.663 0 1.97 1.095 1.97 2.518v4.576z"/></svg><span>LinkedIn</span></a></li>
+            <li><a href="#" class="social-link"><svg viewBox="0 0 16 16" fill="currentColor" style="width:14px;height:14px;margin-right:8px;display:inline-block;vertical-align:middle;"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.02 3.603-.02 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.73V6.275c0-2.017 1.194-3.136 3.028-3.136.878 0 1.8.158 1.8.158v1.97h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg><span>Facebook</span></a></li>
+            <li><a href="#" class="social-link"><svg viewBox="0 0 16 16" fill="currentColor" style="width:14px;height:14px;margin-right:8px;display:inline-block;vertical-align:middle;"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.917 3.917 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg><span>Instagram</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Madhya Mega Ventures Private Limited. All rights reserved.</span>
+        <span>Developed by <span class="developer-credit">Harshul Adwani</span> &middot; harshuladwani@gmail.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
