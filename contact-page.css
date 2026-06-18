@@ -1,0 +1,270 @@
+/* ============================================================
+   Contact Page — contact-page.css
+   Styles specific to Contact.html (loaded after style.css)
+   ============================================================ */
+
+/* ── Scroll reveal ── */
+.reveal { opacity:0; transform:translateY(32px); transition: opacity .7s cubic-bezier(0.22,1,0.36,1), transform .7s cubic-bezier(0.22,1,0.36,1); }
+.reveal.visible { opacity:1; transform:none; }
+.d1 { transition-delay: .08s; }
+.d2 { transition-delay: .18s; }
+.d3 { transition-delay: .28s; }
+.d4 { transition-delay: .38s; }
+
+/* ── Page hero ── */
+.contact-hero {
+  padding: 80px 0 72px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-soft);
+}
+.contact-eyebrow {
+  font-family: var(--ff-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.contact-hero h1 {
+  font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+  margin: 0 auto;
+}
+.contact-hero .lede {
+  margin: 20px auto 0;
+  max-width: 46ch;
+  text-align: center;
+}
+.hero-chips {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  background: var(--bg);
+  font-family: var(--ff-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color .2s, background .2s, transform .2s;
+}
+.chip svg { width: 15px; height: 15px; color: var(--accent); flex-shrink: 0; }
+.chip:hover { background: var(--card); border-color: var(--accent); transform: translateY(-2px); }
+
+/* ── Section 1: Form (centred) ── */
+.form-section {
+  padding: 96px 0;
+}
+.form-section .container {
+  max-width: 780px;
+}
+.form-section-head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.form-section-head h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 10px;
+}
+.form-section-head p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+/* form panel */
+.form-panel {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 52px 56px;
+}
+.form-row-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 22px;
+}
+.form-row label {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.form-optional {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: var(--ff-body);
+}
+.form-row input,
+.form-row textarea,
+.form-row select {
+  font-family: var(--ff-body);
+  font-size: 0.95rem;
+  padding: 13px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  resize: vertical;
+  transition: border-color .18s, box-shadow .18s;
+}
+.form-row input::placeholder,
+.form-row textarea::placeholder { color: var(--ink-soft); opacity: .6; }
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+.form-row select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23475569' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 38px;
+  cursor: pointer;
+}
+.form-submit-btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.07em;
+  padding: 15px 32px;
+  border-radius: var(--radius-md);
+  margin-top: 4px;
+}
+.form-success {
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  background: #ECFDF5;
+  border: 1px solid #6EE7B7;
+  color: #065F46;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-align: center;
+}
+body.dark-mode .form-success {
+  background: rgba(6,95,70,.2);
+  border-color: rgba(110,231,183,.3);
+  color: #6EE7B7;
+}
+
+/* ── Divider between sections ── */
+.section-divider {
+  border: none;
+  height: 1px;
+  background: var(--line);
+  margin: 0;
+}
+
+/* ── Section 2: Info + Map ── */
+.info-section {
+  padding: 96px 0 100px;
+  background: var(--bg-soft);
+}
+.info-section-head {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.info-section-head h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 10px;
+}
+.info-section-head p { font-size: 0.95rem; color: var(--ink-soft); }
+
+.info-map-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* Info cards */
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  transition: border-color .2s, transform .2s;
+}
+.info-card:hover { border-color: var(--accent); transform: translateX(4px); }
+.info-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.info-card-icon svg { width: 18px; height: 18px; }
+.info-card-body h4 {
+  font-size: 0.75rem;
+  font-family: var(--ff-display);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+}
+.info-card-body p,
+.info-card-body a {
+  font-size: 0.97rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+.info-card-body a:hover { color: var(--accent); }
+
+/* Map */
+.map-frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  aspect-ratio: 4/3;
+}
+.map-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .info-map-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 640px) {
+  .form-panel { padding: 32px 24px; }
+  .form-row-split { grid-template-columns: 1fr; }
+}
