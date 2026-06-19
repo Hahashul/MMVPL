@@ -1,23 +1,9 @@
 /* ============================================================
    Contact Page — contact-page.js
-   Scroll-reveal observer for Contact.html
+   ============================================================
+   This file previously duplicated the scroll-reveal observer
+   that script.js already runs site-wide. It's no longer loaded
+   on Contact.html (script.js handles .reveal animations on
+   every page now), and is kept here as an empty hook in case
+   you need contact-page-specific JS later.
    ============================================================ */
-
-(function () {
-  'use strict';
-
-  const revealEls = document.querySelectorAll('.reveal');
-
-  const io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  revealEls.forEach(function (el) {
-    io.observe(el);
-  });
-}());

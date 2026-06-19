@@ -67,35 +67,35 @@
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
       <a href="index.html" class="brand" aria-label="MMVPL home">
-        <img class="brand-mark" src="images/logo-full.png" alt="MMVPL logo" />
+        <img class="brand-mark" src="images/logo-full.png" alt="MMVPL logo" width="160" height="44" loading="eager" />
       </a>
 
-      <ul class="nav-links">
+      <ul class="nav-links" role="list">
         <li><a href="index.html">Home</a></li>
-        <li><a href="hr-solutions.html">Hr Solutions</a></li>
-        <li><a href="project-sales-oem.html" aria-current="page">Project Sales &amp; Oem</a></li>
-        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="hr-solutions.html">HR Solutions</a></li>
+        <li><a href="project-sales-oem.html" aria-current="page">Project Sales &amp; OEM</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
 
-      <a href="Contact.html" class="btn btn-accent nav-cta">
+      <a href="contact.html" class="btn btn-accent nav-cta">
         <span class="btn-icon" aria-hidden="true">
           <svg viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
         get in touch
       </a>
 
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
         <svg viewBox="0 0 18 18" fill="none"><path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
       </button>
 
-      <div class="nav-drawer">
-        <ul>
+      <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <ul role="list">
           <li><a href="index.html">Home</a></li>
-          <li><a href="hr-solutions.html">Hr Solutions</a></li>
-          <li><a href="project-sales-oem.html" aria-current="page">Project Sales &amp; Oem</a></li>
-          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="hr-solutions.html">HR Solutions</a></li>
+          <li><a href="project-sales-oem.html" aria-current="page">Project Sales &amp; OEM</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-        <a href="Contact.html" class="btn btn-accent nav-cta">
+        <a href="contact.html" class="btn btn-accent nav-cta">
           <span class="btn-icon" aria-hidden="true">
             <svg viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
@@ -232,7 +232,7 @@
           <span class="eyebrow">Why partner with us</span>
           <h2 style="margin-top:14px; font-size:clamp(1.9rem,3.6vw,2.6rem);">OEM partnerships built on consistency.</h2>
           <p class="lede" style="margin-top:18px;">Whether you need a single bulk order or an ongoing supply arrangement, our OEM partnerships are structured for clear communication, fair pricing and on-time delivery — every time.</p>
-          <a href="Contact.html" class="btn btn-primary" style="margin-top:24px;">
+          <a href="contact.html" class="btn btn-primary" style="margin-top:24px;">
             <span class="btn-icon" aria-hidden="true">
               <svg viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -304,7 +304,7 @@
             <span class="eyebrow">Have a project or order in mind?</span>
             <h2 style="margin-top:12px;">Share your requirements and we'll get back with options and pricing.</h2>
           </div>
-          <a href="Contact.html" class="btn btn-accent">
+          <a href="contact.html" class="btn btn-accent">
             <span class="btn-icon" aria-hidden="true">
               <svg viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -319,16 +319,13 @@
   <!-- ============================================================
        FOOTER
        ============================================================ -->
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
   <footer class="site-footer">
     <div class="container">
       
       <!-- Footer Top Brand Row -->
       <div class="footer-top">
         <a href="index.html" class="brand" aria-label="MMVPL home">
-          <img class="brand-mark" src="images/logo-full.png" alt="MMVPL logo" style="transform: none; height: 45px; width: auto;" />
+          <img class="brand-mark" src="images/logo-full.png" alt="Madhya Mega Ventures Private Limited" width="150" height="42" loading="lazy" style="transform: none; height: auto; width: 150px;" />
         </a>
         <div class="tagline">
           Empowering Businesses Through People, Products &amp; Performance
@@ -336,7 +333,7 @@
       </div>
 
       <!-- Footer Middle Contact Row -->
-      <div class="footer-contact-bar">
+      <address class="footer-contact-bar" style="font-style:normal;">
         <div class="footer-contact-items">
           <div class="footer-contact-item">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -359,13 +356,13 @@
             <a href="tel:+918109101233">+91-8109101233</a>
           </div>
         </div>
-        <a href="https://maps.google.com/?q=223+Shriram+Colony+Near+SMH+Hospital+Hoshangabad+Road+Bhopal+462026" target="_blank" rel="noopener noreferrer" class="get-directions-btn">
+        <a href="https://maps.google.com/?q=223+Shriram+Colony+Near+SMH+Hospital+Hoshangabad+Road+Bhopal+462026" target="_blank" rel="noopener noreferrer" class="get-directions-btn" aria-label="Get directions to MMVPL office in Bhopal (opens Google Maps)">
           Get Directions 
           <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 10px; height: 10px;">
             <path d="M2 10L10 2M10 2H4M10 2V8" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
-      </div>
+      </address>
 
       <hr class="footer-divider" />
 
@@ -373,16 +370,16 @@
       <div class="footer-cols">
         <div class="footer-col">
           <h4>Company</h4>
-          <ul>
+          <ul role="list">
             <li><a href="index.html">Home</a></li>
             <li><a href="hr-solutions.html">HR Solutions</a></li>
             <li><a href="project-sales-oem.html">Project Sales &amp; OEM</a></li>
-            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Divisions</h4>
-          <ul>
+          <ul role="list">
             <li><a href="hr-solutions.html">HR &amp; Workforce</a></li>
             <li><a href="project-sales-oem.html">Project Sales</a></li>
             <li><a href="project-sales-oem.html">OEM Partnerships</a></li>
@@ -391,34 +388,34 @@
         </div>
         <div class="footer-col">
           <h4>Support</h4>
-          <ul>
-            <li><a href="Contact.html">Enquiry Form</a></li>
+          <ul role="list">
+            <li><a href="contact.html">Enquiry Form</a></li>
             <li><a href="mailto:contact@mmv.co.in">contact@mmv.co.in</a></li>
             <li><a href="tel:+918109101233">+91-8109101233</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Follow Us</h4>
-          <ul>
+          <ul role="list">
             <li>
-              <a href="#" class="social-link">
-                <svg viewBox="0 0 16 16" fill="currentColor" style="width:14px; height:14px; margin-right:8px; display:inline-block; vertical-align:middle;">
+              <a href="https://www.linkedin.com/company/mmvpl" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="MMVPL on LinkedIn (opens in new tab)">
+                <svg viewBox="0 0 16 16" fill="currentColor" style="width:14px; height:14px; margin-right:8px; display:inline-block; vertical-align:middle;" aria-hidden="true">
                   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H3.3V13.39h1.643zm-1.88-8.29c.566 0 1.02-.454 1.02-1.02 0-.565-.454-1.018-1.02-1.018-.566 0-1.019.453-1.019 1.019 0 .566.453 1.02 1.019 1.02zM13.39 13.39h-1.643V10.8c0-.617-.012-1.412-.86-1.412-.86 0-.992.673-.992 1.368v2.634H8.252V6.169h1.578v.981h.022c.22-.416.757-.854 1.554-.854 1.663 0 1.97 1.095 1.97 2.518v4.576z"/>
                 </svg>
                 <span>LinkedIn</span>
               </a>
             </li>
             <li>
-              <a href="#" class="social-link">
-                <svg viewBox="0 0 16 16" fill="currentColor" style="width:14px; height:14px; margin-right:8px; display:inline-block; vertical-align:middle;">
+              <a href="https://www.facebook.com/mmvpl" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="MMVPL on Facebook (opens in new tab)">
+                <svg viewBox="0 0 16 16" fill="currentColor" style="width:14px; height:14px; margin-right:8px; display:inline-block; vertical-align:middle;" aria-hidden="true">
                   <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.02 3.603-.02 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.73V6.275c0-2.017 1.194-3.136 3.028-3.136.878 0 1.8.158 1.8.158v1.97h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
                 </svg>
                 <span>Facebook</span>
               </a>
             </li>
             <li>
-              <a href="#" class="social-link">
-                <svg viewBox="0 0 16 16" fill="currentColor" style="width:14px; height:14px; margin-right:8px; display:inline-block; vertical-align:middle;">
+              <a href="https://www.instagram.com/mmvpl" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="MMVPL on Instagram (opens in new tab)">
+                <svg viewBox="0 0 16 16" fill="currentColor" style="width:14px; height:14px; margin-right:8px; display:inline-block; vertical-align:middle;" aria-hidden="true">
                   <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.917 3.917 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
                 </svg>
                 <span>Instagram</span>
