@@ -33,6 +33,9 @@
   letter-spacing: -0.03em;
   max-width: 18ch;
   margin: 0 auto;
+  text-align: center;
+  border-left: none;
+  padding-left: 0;
 }
 .contact-hero .lede {
   margin: 20px auto 0;
@@ -63,6 +66,8 @@
 }
 .chip svg { width: 15px; height: 15px; color: var(--accent); flex-shrink: 0; }
 .chip:hover { background: var(--card); border-color: var(--accent); transform: translateY(-2px); }
+.chip-static { cursor: default; pointer-events: none; }
+.chip-static:hover { background: var(--bg); border-color: var(--line); transform: none; }
 
 /* ── Section 1: Form (centred) ── */
 .form-section {
